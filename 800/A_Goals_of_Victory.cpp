@@ -22,7 +22,7 @@ class Solution {
             loop(i, 0, n) cin>>arr[i];
             return arr;
         }
-        
+
         vi arrayInput(int n){
             vi arr(n);
             loop(i, 0, n) cin>>arr[i];
@@ -38,6 +38,14 @@ class Solution {
     public:
         void solve(){
             // Your code here
+            int n;
+            cin>>n;
+            vi arr = arrayInput(n - 1);
+            int sum = 0;
+            loop(i, 0, n - 1) sum += arr[i];
+
+            sum = 0 - sum;
+            cout<<sum<<endl;
         }
 };
 
