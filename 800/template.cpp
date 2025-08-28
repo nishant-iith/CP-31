@@ -13,7 +13,7 @@ typedef vector<int> vi;
 #define loop(i, a, b) for(int i=a; i<b; i++)
 #define rloop(i, a, b) for(int i=a-1; i>=b; i--)
 
-class Solution {
+class Helper {
     private:
         vi arrayInput(){
             int n;
@@ -34,7 +34,9 @@ class Solution {
             cin>>s;
             return s;
         }
+};
 
+class Solution : public Helper {
     public:
         void solve(){
             // Your code here
