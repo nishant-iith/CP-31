@@ -64,7 +64,7 @@ class Solution : public Helper {
                 loop(i, 1, arr.size()){
                     ops = min(ops, arr[i] - arr[i-1]);
                 }
-                cout<<(ops/2) + 1<<"\n";
+                cout<<(ops/2) + 1<<"\n";  // /2 will make both values equal and + 1 will give the required operations
             }
         }
 };
