@@ -39,14 +39,26 @@ class Helper {
 
 class Solution : public Helper {
     public:
+        // void solve(){
+        //     // Your code here
+        //     ll a, b, c;
+        //     cin>>a>>b>>c;
+        //     if(a > b) cout<<"First\n"; // what if a = 5 b = 4 c = 1 then First person will press the c button i think both will try to first finish the c buttons
+        //     else if(b > a) cout<<"Second\n";
+        //     else {
+        //         if(c%2 == 0) cout<<"Second\n";
+        //         else cout<<"First\n";
+        //     }
+        // }
         void solve(){
-            // Your code here
             ll a, b, c;
             cin>>a>>b>>c;
-            if(a > b) cout<<"First\n";
-            else if(b > a) cout<<"Second\n";
+            if(c%2==0){
+                if(a > b) cout<<"First\n";
+                else cout<<"Second\n";
+            }
             else {
-                if(c%2 == 0) cout<<"Second\n";
+                if(b > a) cout<<"Second\n";
                 else cout<<"First\n";
             }
         }
