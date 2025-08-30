@@ -35,6 +35,13 @@ class Helper {
             cin>>s;
             return s;
         }
+
+        void printArray(const vi &arr){
+            for(int i=0; i<arr.size(); i++){
+                cout<<arr[i]<<" ";
+            }
+            cout<<endl;
+        }
 };
 
 class Solution : public Helper {
