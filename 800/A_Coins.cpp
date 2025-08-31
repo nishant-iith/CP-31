@@ -45,13 +45,12 @@ class Helper {
 };
 
 /**
- * Problem: Given a binary array a of length n
- * Task: Find the length of the longest segment of consecutive 0s (blank space)
+ * Problem: In Berland, there are coins of denomination 2 and k.
+ * Task: Check if it is possible to form n burles using any number of these coins.
+ * Condition: Find non-negative integers x, y such that 2*x + k*y = n.
  * Input: t test cases
- *        For each test case:
- *          - integer n (length of array)
- *          - n integers (0 or 1)
- * Output: For each test case, print the maximum length of consecutive 0s
+ *        For each test case: integers n and k
+ * Output: "YES" if possible, otherwise "NO"
  */
 
 
@@ -59,21 +58,13 @@ class Solution : public Helper {
     public:
         void solve(){
             // Your code here
-            vi arr = arrayInput();
-            ll ans = 0;
-            ll l = 0, r = 0;
-            while(l <= r && r < arr.size()){
-                if(arr[l] == 1){
-                    l++;
-                    r = l;
-                }
-                else {
-                    if(arr[r] == 0) r++;
-                    else l++;
-                }
-                ans = max(ans, r - l);
+            ll n , k;
+            cin>>n>>k;  // n is greater than equal to k
+            if(n%2==0) cout<<"YES\n";
+            else {
+                if(k%2==0) cout<<"NO\n";
+                else cout<<"YES\n";
             }
-            cout<<ans<<"\n";
         }
 };
 
