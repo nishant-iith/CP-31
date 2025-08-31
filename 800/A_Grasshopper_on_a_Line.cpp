@@ -44,6 +44,14 @@ class Helper {
         }
 };
 
+/**
+ * Question: For a given number x we need to find the jumps to reach x from 1 and whatever jumps we take should not be divisible by k.
+ * We need to minimize the number of jumps.
+ * 
+ * Argument : Atmost moves we need in any case is : <= 2 (Think...)
+ * So since consecutive numbers will never have a common divisor we can either do a single jump directly to the number x but if x has k as a divisor then we can have x -1 and 1 as the two jumps.
+ */
+
 class Solution : public Helper {
     private:
         bool isDivisor(ll a, ll b){  // is b a divisor of a
@@ -55,28 +63,40 @@ class Solution : public Helper {
             // Your code here
             ll x, k;
             cin>>x>>k;
-            if(k>x){ 
-                cout<<"1"<<endl;
-                cout<<x<<endl;
-            }
+            if(x%k != 0){
+                cout<<"1"<<"\n";
+                cout<<x<<"\n";
+            } 
             else {
-                rloop(i, x + 1, 0){
-                    if(isDivisor(x - i, k) || isDivisor(i, k)){
-                        continue;
-                    }
-                    else {
-                        if(i == x){
-                            cout<<"1"<<endl;
-                            cout<<x<<endl;
-                        } 
-                        else {
-                            cout<<"2"<<endl;
-                            cout<<i<<" "<<(x - i)<<endl;
-                        }
-                        break;
-                    }
-                }
+                cout<<"2"<<"\n";
+                cout<<x-1<<" "<<1<<endl;
             }
+
+
+            // ll x, k;
+            // cin>>x>>k;
+            // if(k>x){ 
+            //     cout<<"1"<<endl;
+            //     cout<<x<<endl;
+            // }
+            // else {
+            //     rloop(i, x + 1, 0){
+            //         if(isDivisor(x - i, k) || isDivisor(i, k)){
+            //             continue;
+            //         }
+            //         else {
+            //             if(i == x){
+            //                 cout<<"1"<<endl;
+            //                 cout<<x<<endl;
+            //             } 
+            //             else {
+            //                 cout<<"2"<<endl;
+            //                 cout<<i<<" "<<(x - i)<<endl;
+            //             }
+            //             break;
+            //         }
+            //     }
+            // }
         }
 };
 
