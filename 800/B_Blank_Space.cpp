@@ -48,6 +48,21 @@ class Solution : public Helper {
     public:
         void solve(){
             // Your code here
+            vi arr = arrayInput();
+            ll ans = 0;
+            ll l = 0, r = 0;
+            while(l <= r && r < arr.size()){
+                if(arr[l] == 1){
+                    l++;
+                    r = l;
+                }
+                else {
+                    if(arr[r] == 0) r++;
+                    else l++;
+                }
+                ans = max(ans, r - l);
+            }
+            cout<<ans<<"\n";
         }
 };
 
