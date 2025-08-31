@@ -44,26 +44,10 @@ class Helper {
         }
 };
 
-/**
- * Problem: Given permutation a of length n
- * Task: Find permutation b of length n such that
- *       a1+b1 <= a2+b2 <= ... <= an+bn
- * Guarantee: Such b always exists
- * Input: t test cases, each with n and permutation a
- * Output: Any valid permutation b for each test case
- */
-
 class Solution : public Helper {
     public:
         void solve(){
             // Your code here
-            vi arr = arrayInput();
-            vi ans;
-            int n = arr.size();
-            loop(i, 0, n){
-                ans.pb(n - arr[i] + 1);
-            }
-            printArray(ans);
         }
 };
 
