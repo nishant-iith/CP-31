@@ -58,7 +58,7 @@ class Helper {
  * Output: Valid x (0 ≤ x < 2^8), or -1 if not possible
  * 
  * 
- * 
+ * 😠
  * Intution : If the size of the array is even then x will be even times and eventually x xor will be 0 so x will never appear in b1 ⊕ b2 ⊕ ... ⊕ bn. 
  * Case 1 : if size is even then check a1 ⊕ a2 ⊕ ... ⊕ an  is non zero then return -1 otherwise x can be anything.
  * Case 2 : if size is odds then  b1 ⊕ b2 ⊕ ... ⊕ bn = a1 ⊕ a2 ⊕ ... ⊕ an ⊕ x and we need this to be equal to 0. So we can keep x = a1 ⊕ a2 ⊕ ... ⊕ an.
