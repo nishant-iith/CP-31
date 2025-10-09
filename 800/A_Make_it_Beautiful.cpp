@@ -61,6 +61,19 @@ public:
         printArray(arr);
         return;
     }
+    void solve_alter(){
+        // Your code here
+        vi arr = arrayInput();
+        if(arr[0] == arr[arr.size()-1]){ 
+            cout<<"NO"<<endl; 
+            return;
+        }
+        cout<<"YES"<<endl;
+        cout<<arr[arr.size()-1]<<" ";
+        loop(i, 0, arr.size()-2) cout<<arr[i]<<" ";
+        printArray(arr);
+        return;
+    }
 };
 
 int main(){
