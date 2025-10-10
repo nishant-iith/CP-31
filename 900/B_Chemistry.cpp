@@ -40,6 +40,7 @@ protected:
 
 /**
  * Problem : A string s of length n and integer k and we can remove exactly k characters from s to make it palindrome.
+ * Solution : For any palindromic string there can be at most 1 character with odd frequency.
  */
 
 class Solution : public Helper {
@@ -53,14 +54,8 @@ public:
         string s = stringInput();
         map<char, int> freq;
         for(char c : s) freq[c]++; 
-
         int countOfOddFreq = 0;
         for(auto it : freq) if(it.second % 2 != 0) countOfOddFreq++;
-
-        if(n == 2 && k == 1){
-            cout << "YES" << endl;
-            return;
-        }
         if(countOfOddFreq <= k + 1) cout << "YES" << endl;
         else cout << "NO" << endl;
         return ;
