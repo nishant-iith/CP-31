@@ -67,7 +67,6 @@ public:
             kingAttackPositions.insert({kx + dx[i]*a, ky + dy[i]*b}); // a,b for king
             kingAttackPositions.insert({kx + dx[i]*b, ky + dy[i]*a}); // b,a for king
 
-
             // queen can attack from
             queenAttackPositions.insert({qx + dx[i]*a, qy + dy[i]*b}); // a,b for queen
             queenAttackPositions.insert({qx + dx[i]*b, qy + dy[i]*a}); // b,a for queen
